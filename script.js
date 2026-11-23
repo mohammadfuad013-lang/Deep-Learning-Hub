@@ -28,3 +28,50 @@ const randomIndex = Math.floor(Math.random() * challenges.length);
 document.getElementById("challengeText").textContent =
 challenges[randomIndex];
 }
+// ==============================
+// LEARNING PROGRESS SYSTEM
+// ==============================
+
+let completedLessons = JSON.parse(
+    localStorage.getItem("completedLessons") || "[]"
+);
+
+function saveProgress(subject) {
+    if (!completedLessons.includes(subject)) {
+        completedLessons.push(subject);
+    }
+
+    localStorage.setItem(
+        "completedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+    updateProgress();
+}
+
+function updateProgress() {
+    const totalSubjects = 4;
+
+    document.getElementById("progressText").textContent =
+        "Completed subjects: " + completedLessons.length +
+        " / " + totalSubjects;
+
+    const percentage =
+        (completedLessons.length / totalSubjects) * 100;
+
+    document.getElementById("progressFill").style.width =
+        percentage + "%";
+}
+
+function resetProgress() {
+    if (confirm("Are you sure you want to reset your progress?")) {
+        completedLessons = [];
+
+        localStorage.removeItem("completedLessons");
+
+        updateProgress();
+    }
+}
+
+// Update progress when the website loads
+updateProgress();
