@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Learning Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><header>
+    <div class="logo">🧠 Deep Learning Hub</div>
+    <button id="themeBtn">🌙</button>
+</header><section class="hero">
+    <h1>Learn to Understand,<br>Not Just Memorize.</h1>
+    <p>Explore science, solve problems, and develop your thinking.</p>
+</section><section class="dashboard">
+    <h2>Explore Your Subjects</h2><div class="cards">
+    <div class="card">
+        <span>🧮</span>
+        <h3>Mathematics</h3>
+        <p>Explore logic, patterns and problem-solving.</p>
+        <button onclick="openSubject('Mathematics')">Explore</button>
+    </div>
+
+    <div class="card">
+        <span>⚛️</span>
+        <h3>Physics</h3>
+        <p>Understand the laws governing our universe.</p>
+        <button onclick="openSubject('Physics')">Explore</button>
+    </div>
+
+    <div class="card">
+        <span>🧪</span>
+        <h3>Chemistry</h3>
+        <p>Discover matter, reactions and molecules.</p>
+        <button onclick="openSubject('Chemistry')">Explore</button>
+    </div>
+
+    <div class="card">
+        <span>🧬</span>
+        <h3>Biology</h3>
+        <p>Explore life, organisms and living systems.</p>
+        <button onclick="openSubject('Biology')">Explore</button>
+    </div>
+</div>
+
+</section><section class="thinking">
+    <h2>🧠 Think & Solve</h2>
+    <p>Knowledge becomes powerful when you understand and apply it.</p>
+    <button onclick="challenge()">Daily Challenge</button>
+    <p id="challengeText"></p>
+</section><footer>
+    <p>Deep Learning Hub | Learn • Think • Grow</p>
+</footer><script src="script.js"></script></body>
+</html>
