@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Arial, sans-serif;
+background: #f4f7fb;
+color: #1e293b;
+transition: 0.3s;
+}
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+background: #0f172a;
+color: white;
+}
+
+.logo {
+font-size: 20px;
+font-weight: bold;
+}
+
+header button {
+background: #334155;
+border: none;
+padding: 10px;
+border-radius: 10px;
+color: white;
+cursor: pointer;
+}
+
+.hero {
+padding: 60px 20px;
+text-align: center;
+background: linear-gradient(135deg, #2563eb, #7c3aed);
+color: white;
+}
+
+.hero h1 {
+font-size: 36px;
+margin-bottom: 15px;
+}
+
+.hero p {
+font-size: 17px;
+}
+
+.dashboard {
+padding: 35px 20px;
+}
+
+.dashboard h2 {
+text-align: center;
+margin-bottom: 25px;
+}
+
+.cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 20px;
+}
+
+.card {
+background: white;
+padding: 25px;
+border-radius: 16px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+transition: 0.3s;
+}
+
+.card:hover {
+transform: translateY(-5px);
+}
+
+.card span {
+font-size: 35px;
+}
+
+.card h3 {
+margin: 15px 0;
+}
+
+.card p {
+line-height: 1.6;
+margin-bottom: 15px;
+}
+
+.card button, .thinking button {
+padding: 11px 18px;
+border: none;
+border-radius: 8px;
+background: #2563eb;
+color: white;
+cursor: pointer;
+}
+
+.thinking {
+margin: 20px;
+padding: 30px;
+border-radius: 16px;
+background: #e0e7ff;
+text-align: center;
+}
+
+.thinking p {
+margin: 15px 0;
+}
+
+footer {
+text-align: center;
+padding: 25px;
+background: #0f172a;
+color: white;
+margin-top: 30px;
+}
+
+body.dark {
+background: #0f172a;
+color: white;
+}
+
+body.dark .card {
+background: #1e293b;
+color: white;
+}
+
+body.dark .thinking {
+background: #1e293b;
+}
+
+body.dark .hero {
+background: linear-gradient(135deg, #111827, #312e81);
+}
